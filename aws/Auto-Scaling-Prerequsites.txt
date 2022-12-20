@@ -1,0 +1,18 @@
+
+1. Have an ami with an instance where apache starts during instance launch
+	1. Lanch an instance (Amazon Linux or Ubuntu Linux)
+	2. Install Apache in it
+	3. add a line service apache2 start in /etc/rc.local  (Ubuntu ) 
+	              service httpd start    in /etc/rc.local  (Amazon Linux )
+				  chkconfig httpd on
+	4. Create an AMI from that instance.
+
+2. You have to have a load balancer with no instances registered (e.g. mylb)
+
+3. You have to a notification with a valid email id registered.
+
+4. You have to have the APIs for Autoscaling and Cloud watch installed in a system
+
+5. You need to have Java ver 1.5 > installed 
+
+6. You need to have proper environment variables defined for working with Amazon AWS EC2.
